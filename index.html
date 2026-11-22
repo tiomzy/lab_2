@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
@@ -6,67 +6,146 @@
   <meta name="description" content="Резюме Артема Перебойчука, студента спеціальності «Кібербезпека»">
   <meta name="author" content="Артем Перебойчук">
   <title>Резюме — Артем Перебойчук</title>
+  <!-- 1. Зовнішній спосіб підключення стилів (External CSS) -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- 2. Внутрішній спосіб підключення стилів (Internal CSS) -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .header-badge {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Артем Перебойчук</h1>
-    <p>Студент 2 курсу, спеціальність «Кібербезпека»</p>
-    <nav>
-      <ul>
-        <li><a href="#about">Про себе</a></li>
-        <li><a href="#experience">Досвід</a></li>
-        <li><a href="#education">Освіта</a></li>
-        <li><a href="#skills">Навички</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section id="about">
-      <h2>Про себе</h2>
-      <p>Навчаюся у Львівській політехніці за спеціальністю «Кібербезпека». Цікавлюся захистом інформації, мережевою безпекою та вебтехнологіями. Прагну здобути практичний досвід у сфері інформаційної безпеки та розробки.</p>
-    </section>
-
-    <section id="experience">
-      <h2>Досвід</h2>
-      <article>
-        <h3>Навчальні та особисті проєкти</h3>
-        <p>2025 — теперішній час</p>
-        <ul>
-          <li>Налаштування віртуальної лабораторії на Linux для вивчення основ адміністрування та мережевої безпеки.</li>
-          <li>Аналіз мережевого трафіку за допомогою Wireshark в межах навчальних завдань.</li>
-          <li>Створення вебсторінок на HTML та React, ведення проєктів у Git.</li>
+  <div class="page-container">
+    <header class="site-header">
+      <div class="header-top-actions">
+        <!-- 3. Вбудований спосіб підключення стилів (Inline CSS) -->
+        <span class="header-badge" style="background-color: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); font-weight: 600;">
+          Cybersecurity Student
+        </span>
+        <!-- Перемикач денної/нічної теми (Лабораторна №4, п. 4) -->
+        <button id="theme-toggle" class="theme-toggle-btn" type="button" aria-label="Перемкнути тему сайту">
+          🌙 Нічна тема
+        </button>
+      </div>
+      <h1>Артем Перебойчук</h1>
+      <p class="subtitle">Студент 2 курсу, спеціальність «Кібербезпека»</p>
+      <nav aria-label="Головна навігація">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#about">Про себе</a></li>
+          <li><a class="nav-link" href="#experience">Досвід</a></li>
+          <li><a class="nav-link" href="#education">Освіта</a></li>
+          <li><a class="nav-link" href="#skills">Навички</a></li>
+          <li><a class="nav-link" href="#reviews">Відгуки</a></li>
         </ul>
-      </article>
-    </section>
+      </nav>
+    </header>
 
-    <section id="education">
-      <h2>Освіта</h2>
-      <article>
-        <h3>Національний університет «Львівська політехніка»</h3>
-        <p>Кафедра ІКТА, спеціальність «Кібербезпека», бакалаврат, 2025 — теперішній час</p>
-      </article>
-    </section>
+    <main class="content-grid">
+      <section id="about" class="card">
+        <h2>Про себе</h2>
+        <p>Навчаюся у Львівській політехніці за спеціальністю «Кібербезпека». Цікавлюся захистом інформації, мережевою безпекою та вебтехнологіями. Прагну здобути практичний досвід у сфері інформаційної безпеки та розробки.</p>
+      </section>
 
-    <section id="skills">
-      <h2>Навички</h2>
-      <ul>
-        <li>Основи кібербезпеки та мережевих технологій</li>
-        <li>Linux, командний рядок</li>
-        <li>HTML, основи React, Git</li>
-        <li>Python (базовий рівень)</li>
-        <li>Мови: українська — рідна, англійська — технічна</li>
-      </ul>
-    </section>
-  </main>
+      <section id="experience" class="card">
+        <h2>Досвід</h2>
+        <article class="experience-item">
+          <h3>Навчальні та особисті проєкти</h3>
+          <p class="period">2025 — теперішній час</p>
+          <ul class="experience-list">
+            <li>Налаштування віртуальної лабораторії на Linux для вивчення основ адміністрування та мережевої безпеки.</li>
+            <li>Аналіз мережевого трафіку за допомогою Wireshark в межах навчальних завдань.</li>
+            <li>Створення вебсторінок на HTML та React, ведення проєктів у Git.</li>
+          </ul>
+        </article>
+      </section>
 
-  <footer>
-    <h2>Контакти</h2>
-    <address>
-      <p>Email: <a href="mailto:artem.pereboichuk.kb.2025@lpnu.ua">artem.pereboichuk.kb.2025@lpnu.u</a></p>
-      <p>GitHub: <a href="https://github.com/tiomzy" target="_blank">github.com/tiomzy</a></p>
-      <p>Місто: Львів</p>
-    </address>
-  </footer>
+      <section id="education" class="card">
+        <h2>Освіта</h2>
+        <article class="education-item">
+          <h3>Національний університет «Львівська політехніка»</h3>
+          <p class="period">Кафедра ІКТА, спеціальність «Кібербезпека», бакалаврат, 2025 — теперішній час</p>
+        </article>
+      </section>
+
+      <section id="skills" class="card">
+        <h2>Навички</h2>
+        <ul class="skills-list">
+          <li class="skill-item">Основи кібербезпеки та мережевих технологій</li>
+          <li class="skill-item">Linux, командний рядок</li>
+          <li class="skill-item">HTML, основи React, Git</li>
+          <li class="skill-item">Python (базовий рівень)</li>
+          <li class="skill-item">Мови: українська — рідна, англійська — технічна</li>
+        </ul>
+      </section>
+
+      <!-- 2. Відображення динамічного вмісту отриманого із сервера (Лабораторна №4, п. 2) -->
+      <section id="reviews" class="card">
+        <h2>Відгуки попередніх роботодавців (Варіант 16)</h2>
+        <div id="comments-container" class="comments-grid">
+          <p class="loading-text">Завантаження коментарів із сервера...</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <h2>Контакти</h2>
+      <address class="contact-info">
+        <p>Email: <a href="mailto:artem.pereboichuk.kb.2025@lpnu.ua">artem.pereboichuk.kb.2025@lpnu.ua</a></p>
+        <p>GitHub: <a href="https://github.com/tiomzy" target="_blank" rel="noopener noreferrer">github.com/tiomzy</a></p>
+        <p>Місто: Львів</p>
+      </address>
+
+      <!-- 1. Відображення інформації з localStorage у футері сайту (Лабораторна №4, п. 1) -->
+      <div class="storage-section">
+        <h3>Системна інформація з localStorage</h3>
+        <div id="localstorage-info" class="storage-grid"></div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- 3. Модальне вікно із формою зворотного зв'язку (Лабораторна №4, п. 3) -->
+  <div id="feedback-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modal-title">Форма зворотного зв'язку</h2>
+        <button id="close-modal" class="modal-close-btn" type="button" aria-label="Закрити модальне вікно">&times;</button>
+      </div>
+      <p class="modal-subtitle">Залиште ваші контактні дані та повідомлення — форма буде надіслана через сервіс Formspree.</p>
+      <form id="feedback-form" action="https://formspree.io/f/mzeekjrp" method="POST" class="feedback-form">
+        <div class="form-group">
+          <label for="feedback-name">Ім’я</label>
+          <input type="text" id="feedback-name" name="name" placeholder="Введіть ваше ім’я" required>
+        </div>
+        <div class="form-group">
+          <label for="feedback-email">Email</label>
+          <input type="email" id="feedback-email" name="email" placeholder="example@mail.com" required>
+        </div>
+        <div class="form-group">
+          <label for="feedback-phone">Номер телефону</label>
+          <input type="tel" id="feedback-phone" name="phone" placeholder="+380 XX XXX XX XX" required>
+        </div>
+        <div class="form-group">
+          <label for="feedback-message">Повідомлення</label>
+          <textarea id="feedback-message" name="message" rows="4" placeholder="Введіть текст вашого повідомлення..." required></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn-submit">Надіслати</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Підключення зовнішнього файлу JavaScript (Лабораторна №4) -->
+  <script src="script.js"></script>
 </body>
 </html>
